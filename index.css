@@ -1,3 +1,27 @@
+*, *::before, *::after {
+	box-sizing: border-box;    
+}
+
 body {
+  margin: 0;
+  padding: 0;
+
   font-family: 'Poppins', sans-serif;
+}
+
+.main-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0;
+  padding: 17px 23px;
+
+  list-style: none;
+}
+
+.main-navigation-logo {
+  padding: 11px 31px;
+  background: linear-gradient(270deg, #FA695A 0%, #F83375 100%);
+  border-radius: 30px;
 }
