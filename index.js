@@ -7,7 +7,7 @@ function getNewDog() {
 }
 
 const render = () => 
-  document.body.innerHTML = dog.getDogHtml()
+  document.getElementById("main-container").innerHTML = dog.getDogHtml()
 
 let dog = getNewDog()
 render()
