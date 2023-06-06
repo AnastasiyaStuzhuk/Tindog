@@ -37,18 +37,26 @@ body {
   display: flex;
 }
 
+.main-navigation__icon:hover path,
+.main-navigation__icon:active path {
+  fill: #cbcfd4;
+  transition: 0.5s;
+}
+
 .main-navigation-logo {
   padding: 11px 31px;
   background: linear-gradient(270deg, #FA695A 0%, #F83375 100%);
   border-radius: 30px;
 }
 
-.main-container {
-  padding: 0 8px;
+.main-navigation-logo:hover {
+  background: linear-gradient(100deg, #FA695A 0%, #F83375 100%);
+  transition: 0.5s;
 }
 
-.profile-wrapper {
-  margin-bottom: 25px;
+.profile-card {
+  background: linear-gradient(180deg, #FFFFFF 0%, #F6F7FB 100%);
+  padding: 0px 10px 24px;
 }
 
 .profile {
@@ -63,6 +71,23 @@ body {
   height: auto;
 
   object-fit: cover;
+}
+
+.profile__badge {
+  position: absolute;
+  top: 7%;
+  left: 1.8%;
+
+  width: 49%;
+
+  transform: rotate(-30deg);
+}
+
+.profile__badge img {
+  display: block;
+
+  width: 100%;
+  height: auto;
 }
 
 .profile__info {
@@ -82,6 +107,8 @@ body {
 }
 
 .profile__desc {
+  max-width: 400px;
+
   margin: 0;
   margin-top: 5px;
 
@@ -92,7 +119,7 @@ body {
   color: #B7B7B7;
 }
 
-.profile__buttons {
+.action-buttons {
   margin-top: 24px;
 
   display: flex;
@@ -101,7 +128,7 @@ body {
   column-gap: 24px;
 }
 
-.profile__button {
+.action-button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -115,4 +142,56 @@ body {
   background: #FFFFFF;
   box-shadow: 0px 10px 20px #E9E9EA;
   cursor: pointer;
+}
+
+.action-button_reject:hover,
+.action-button_reject:focus,
+.action-button_reject:active {
+  background: #FFE7EF;
+  box-shadow: 0px 10px 20px #EDD9DF;
+  transition: 0.5s;
+}
+
+.action-button_accept:hover,
+.action-button_accept:focus,
+.action-button_accept:active {
+  background: #DBFFF4;
+  box-shadow: 0px 10px 20px #CCF1E6;
+  transition: 0.5s;
+}
+
+.message {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.message__title {
+  margin: 0;
+  margin-top: 25px;
+
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.message__img {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+
+  width: 80%;
+  height: auto;
+}
+
+@media (min-width: 600px) {
+  .profile-card {
+    max-width: 525px;
+    margin: 0 auto;
+  }
+
+  .main-navigation {
+    max-width: 600px;
+    margin: 0 auto;
+  }
 }
